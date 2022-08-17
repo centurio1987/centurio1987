@@ -1,6 +1,9 @@
 ### Hi there 👋
 ![](https://img.shields.io/badge/typescript-3178C6?logo=typescript&logoColor=white)
 ![](https://img.shields.io/badge/nestjs-E0234E?logo=nestjs&logoColor=white)
+![](https://img.shields.io/badge/typeorm-262627?logo=nestjs&logoColor=white)
+![](https://img.shields.io/badge/vue-4FC08D?logo=vue.js&logoColor=white)
+![](https://img.shields.io/badge/apollo-311C87?logo=apollographql&logoColor=white)
 
 <!--
 **centurio1987/centurio1987** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
