@@ -17,7 +17,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=gruvbox&locale=kr&include_all_commits=true
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=gruvbox&locale=kr&include_all_commits=true&commits_year=2025
           path: profile/stats.svg
           token: ${{ secrets.MY_PAT }}
       - name: Generate top languages card
