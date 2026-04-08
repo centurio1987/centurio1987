@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">centurio1987의 GitHub 통계, Rank: C</title>
-        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  : 47, PR 횟수: 0, 이슈 개수: 1, (작년) 기여: 0</desc>
+        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  : 47, PR 횟수: 1, 이슈 개수: 1, (작년) 기여: 0</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 241.55808541324708;
+        stroke-dashoffset: 240.69306072477784;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >0</text>
+      >1</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
