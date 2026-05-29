@@ -6,7 +6,7 @@
 
 ### 👋 안녕하세요, 김윤덕입니다
 
-**Backend & Infra Engineer · Product Owner** — 4~7년차
+**Backend & Infra Engineer · Product Owner** — 7년차
 
 제품 요구사항 정의부터 백엔드 설계, 인프라 운영까지 한 흐름으로 책임지는 것을 좋아합니다.
 TypeScript/NestJS 기반 API와 Terraform·Kubernetes 인프라를 주로 다루며,
