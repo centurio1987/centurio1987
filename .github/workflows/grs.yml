@@ -1,10 +1,10 @@
 name: Update README cards
 
-# 변경 요약 (기존 대비)
-#  - stats 옵션에서 commits_year=2025 제거  → 매번 최신 기준으로 갱신
-#  - include_all_commits=true 제거          → private 커밋 집계와 충돌하던 옵션 (검색 API는 공개 저장소만 봄)
-#  - count_private=true 추가                → private 기여(커밋/PR/이슈/리뷰) 집계
-#  - 스케줄을 하루 2회로 (선택)             → 수치 신선도 향상
+# 변경 요약
+#  - "Resolve current year" 스텝 추가 → 현재 연도를 동적으로 계산 (매년 자동 갱신, 수동 수정 불필요)
+#  - stats 옵션에 commits_year=<올해> 명시 → 올해 커밋이 집계되도록 (작년 고정 문제 해결)
+#  - count_private=true 유지 → private 기여 포함
+#  - 스케줄 하루 2회 (선택)
 
 on:
   schedule:
@@ -19,12 +19,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 현재 연도를 매 실행마다 계산 → commits_year 에 사용 (내년에 자동으로 2027 등으로 바뀜)
+      - name: Resolve current year
+        id: year
+        run: echo "value=$(date -u +'%Y')" >> "$GITHUB_OUTPUT"
+
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          # count_private=true 가 핵심. include_all_commits / commits_year 는 의도적으로 뺌.
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=gruvbox&locale=kr&count_private=true
+          # count_private=true (private 포함) + commits_year=<올해> (올해 집계)
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=gruvbox&locale=kr&count_private=true&commits_year=${{ steps.year.outputs.value }}
           path: profile/stats.svg
           token: ${{ secrets.MY_PAT }}
 
@@ -32,7 +37,6 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          # PAT에 private 접근 권한이 있으면 private 저장소 언어도 함께 집계됨
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=8
           path: profile/top-langs.svg
           token: ${{ secrets.MY_PAT }}
