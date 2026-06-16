@@ -106,8 +106,8 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 
 <br/>
 
-[![GitHub Profile Stats](https://github.com/centurio1987/centurio1987/raw/master/profile/stats.svg)](https://github.com/centurio1987/centurio1987/blob/master/profile/stats.svg)
-[![Top Langs](https://github.com/centurio1987/centurio1987/raw/master/profile/top-langs.svg)](https://github.com/centurio1987/centurio1987/blob/master/profile/top-langs.svg)
+[![GitHub Profile Stats](./profile/stats.svg)](./profile/stats.svg)
+[![Top Langs](./profile/top-langs.svg)](./profile/top-langs.svg)
 [![GitHub Streak](https://streak-stats.demolab.com?user=centurio1987)](https://git.io/streak-stats)
 
 </details>
