@@ -20,7 +20,7 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 
 <!-- profile:bullets:start -->
 - 🔭 현재 관심사: Plugin 아키텍처 운영 · 온프레미스 네이티브 K8s · 제품팀 시스템
-- 🌱 학습 중: Rust (`estd` 실험), 개인 지식 베이스(my-wiki)
+- 🌱 학습 중: Rust (`estd` 실험), 알고리즘/자료구조 가이드(code-test), 개인 지식 베이스(my-wiki)
 - 💼 **PO · CTO · Product Engineer 역할을 한 흐름으로 풀 수 있는 자리를 찾고 있습니다 (Open to opportunities)**
 - 📫 연락: centurio87@naver.com
 <!-- profile:bullets:end -->
@@ -48,7 +48,8 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 
 | 프로젝트 | 설명 |
 |---|---|
-| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 워크플로우 자동화 실험 |
+| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 프로젝트 부트스트랩과 사후 작업 검토 자동화 실험 |
+| [code-test](https://github.com/centurio1987/code-test) | 알고리즘·자료구조 학습 노트 — MDX/React 시뮬레이션 기반 가이드 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식 베이스 위키 |
 | [design-pattern-guide](https://github.com/centurio1987/design-pattern-guide) | 디자인 패턴 학습·정리 노트 |
 | [my-nvim](https://github.com/centurio1987/my-nvim) | 개인 Neovim 설정 |
@@ -113,5 +114,5 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 </details>
 
 <!-- profile:last-updated:start -->
-<!-- Last updated: 2026-06-02 -->
+<!-- Last updated: 2026-06-22 -->
 <!-- profile:last-updated:end -->
