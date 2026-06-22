@@ -60,7 +60,6 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 - `tr-docs` — 공식 문서·PDF를 EPUB으로 재구성하는 도구 (Python)
 - `mindful-fortune-teller` — 20~30대 여성 타겟 운세 앱 (TypeScript)
 - `estd` — Rust 학습/실험
-- `carbon-accounting-nest-sample` · `carbon-accounting-vue-sample` · `lync-sample` — LCA·탄소회계 도메인 포트폴리오 샘플 (NestJS·Vue·LynC)
 - `infrastructure` — 개인 인프라 IaC (HCL)
 - `obsidian-writing-vault` — 개인 글쓰기 vault
 <!-- profile:projects:end -->
