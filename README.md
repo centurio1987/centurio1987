@@ -14,13 +14,13 @@
 자원이 부족하고 방향이 자주 바뀌는 스타트업에서 **0→1 제품과 팀의 개발 시스템을 함께 설계**해 왔습니다.
 PO로 전략·제품을 그리고, CTO로 의사결정의 기술 정합성을 책임지며,
 **NestJS로 도메인을 직접 손코딩하는 Product Engineer**입니다.
-LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kubernetes 위에 제품팀 시스템을 정착시켰습니다.
+B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kubernetes 위에 제품팀 시스템을 정착시켰습니다.
 한 사람이 **기획에서 구현까지 all-in-one**으로 책임지는 흐름을 좋아합니다.
 <!-- profile:intro:end -->
 
 <!-- profile:bullets:start -->
-- 🔭 현재 관심사: Plugin 아키텍처 운영 · 온프레미스 네이티브 K8s · 제품팀 시스템
-- 🌱 학습 중: Rust (`estd` 실험), 알고리즘/자료구조 가이드(code-test), 개인 지식 베이스(my-wiki)
+- 🔭 현재 관심사: Plugin 아키텍처 운영 · 디자인 시스템 · 온프레미스 네이티브 K8s · 제품팀 시스템
+- 🌱 학습 중: Rust (`estd` 실험), 알고리즘/자료구조 가이드(grow-up-programming), 개인 지식 베이스(my-wiki)
 - 💼 **PO · CTO · Product Engineer 역할을 한 흐름으로 풀 수 있는 자리를 찾고 있습니다 (Open to opportunities)**
 - 📫 연락: centurio87@naver.com
 <!-- profile:bullets:end -->
@@ -35,7 +35,7 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 - **인프라·DevOps** — On-Premise 네이티브 K8s(Talos OS·iPXE) · Terraform/Terramate IaC · Keycloak SSO/IAM · GitOps · 관측가능성 · ISO 27001·27017.
 - **제품·PO** — 전략 분석(PESTEL·3C·5Forces·STP) · Contextual Inquiry 기반 제품 발견 · PMF 정렬 제품 정의·제품화 전략.
 - **리더십·팀 시스템** — IT 거버넌스·개발 표준 수립, 팀원을 Product Engineer로 육성해 기획~엔지니어링을 한 사람이 책임지게 한다.
-- **도메인** — LCA(전과정평가)·온실가스 DX·고가 시계 시세/거래·앱 푸시/메트릭 수집·On-Premise Cloud 솔루션.
+- **도메인** — B2B SaaS·DX 솔루션·고가 시계 시세/거래·앱 푸시/메트릭 수집·On-Premise Cloud 솔루션.
 <!-- profile:experience-summary:end -->
 
 #### 🔬 사이드 프로젝트
@@ -48,8 +48,9 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 
 | 프로젝트 | 설명 |
 |---|---|
-| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 프로젝트 부트스트랩과 사후 작업 검토 자동화 실험 |
-| [code-test](https://github.com/centurio1987/code-test) | 알고리즘·자료구조 학습 노트 — MDX/React 시뮬레이션 기반 가이드 |
+| [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | TypeScript 디자인 시스템 — 스타일 가이드 카탈로그와 variant/layout 프리셋 실험 |
+| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 웹 리서치·애니메이션·MDX 다이어그램 자동화 실험 |
+| [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 알고리즘·자료구조 학습 가이드 — MDX 가이드와 실습 스텁 기반 학습 환경 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식 베이스 위키 |
 | [design-pattern-guide](https://github.com/centurio1987/design-pattern-guide) | 디자인 패턴 학습·정리 노트 |
 | [my-nvim](https://github.com/centurio1987/my-nvim) | 개인 Neovim 설정 |
@@ -113,5 +114,5 @@ LCA(전과정평가) SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스
 </details>
 
 <!-- profile:last-updated:start -->
-<!-- Last updated: 2026-06-22 -->
+<!-- Last updated: 2026-06-30 -->
 <!-- profile:last-updated:end -->
