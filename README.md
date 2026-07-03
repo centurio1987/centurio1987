@@ -49,6 +49,7 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 | 프로젝트 | 설명 |
 |---|---|
 | [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | TypeScript UI 패키지 — 스타일 가이드 카탈로그와 variant/layout 프리셋을 제공하는 실사용 프로젝트 |
+| [mindful-fortune-teller](https://github.com/centurio1987/mindful-fortune-teller) | TypeScript 마음챙김 포춘텔러 앱 — 매일의 운세와 대화형 경험을 제공하는 프로젝트 |
 | [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 웹 리서치·애니메이션·MDX 다이어그램 자동화 실험 |
 | [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 알고리즘·자료구조 학습 가이드 — MDX 가이드와 실습 스텁 기반 학습 환경 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식 베이스 위키 |
@@ -59,7 +60,6 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 
 - `stock-analysis` — 주식 투자 인사이트 보고 자동 생성
 - `tr-docs` — 공식 문서·PDF를 EPUB으로 재구성하는 도구 (Python)
-- `mindful-fortune-teller` — 20~30대 여성 타겟 운세 앱 (TypeScript)
 - `estd` — Rust 학습/실험
 - `infrastructure` — 개인 인프라 IaC (HCL)
 - `obsidian-writing-vault` — 개인 글쓰기 vault
