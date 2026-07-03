@@ -42,13 +42,13 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 
 <!-- profile:projects:start -->
 > 2025년 이후 시작한 작업 위주로 정리했습니다. 공개 repo는 직접 들어가서 보실 수 있고,
-> 비공개는 회사 자산이거나 포트폴리오용 샘플이라 이름과 요약만 표기합니다.
+> 일부 작업은 공개 가능한 범위의 이름과 요약만 표기합니다.
 
 **공개**
 
 | 프로젝트 | 설명 |
 |---|---|
-| [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | TypeScript 디자인 시스템 — 스타일 가이드 카탈로그와 variant/layout 프리셋 실험 |
+| [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | TypeScript UI 패키지 — 스타일 가이드 카탈로그와 variant/layout 프리셋을 제공하는 실사용 프로젝트 |
 | [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 웹 리서치·애니메이션·MDX 다이어그램 자동화 실험 |
 | [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 알고리즘·자료구조 학습 가이드 — MDX 가이드와 실습 스텁 기반 학습 환경 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식 베이스 위키 |
