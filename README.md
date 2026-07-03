@@ -19,7 +19,7 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 <!-- profile:intro:end -->
 
 <!-- profile:bullets:start -->
-- 🔭 현재 관심사: Plugin 아키텍처 운영 · 디자인 시스템 · 온프레미스 네이티브 K8s · 제품팀 시스템
+- 🔭 현재 관심사: Plugin 아키텍처 운영 · 디자인 시스템 · 테크 뉴스 큐레이션 자동화 · 온프레미스 네이티브 K8s
 - 🌱 학습 중: Rust (`estd` 실험), 알고리즘/자료구조 가이드(grow-up-programming), 개인 지식 베이스(my-wiki)
 - 💼 **PO · CTO · Product Engineer 역할을 한 흐름으로 풀 수 있는 자리를 찾고 있습니다 (Open to opportunities)**
 - 📫 연락: centurio87@naver.com
@@ -50,7 +50,8 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 |---|---|
 | [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | TypeScript UI 패키지 — 스타일 가이드 카탈로그와 variant/layout 프리셋을 제공하는 실사용 프로젝트 |
 | [mindful-fortune-teller](https://github.com/centurio1987/mindful-fortune-teller) | TypeScript 마음챙김 포춘텔러 앱 — 매일의 운세와 대화형 경험을 제공하는 프로젝트 |
-| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 웹 리서치·애니메이션·MDX 다이어그램 자동화 실험 |
+| [tech-news-wiki](https://github.com/centurio1987/tech-news-wiki) | Python 테크 뉴스 위키 — 오늘의 기술 뉴스를 수집해 독자에게 큐레이션하는 파이프라인 |
+| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 개인 Claude 플러그인 마켓플레이스 — 웹 리서치·MDX 다이어그램·wiki-forge 자동화 실험 |
 | [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 알고리즘·자료구조 학습 가이드 — MDX 가이드와 실습 스텁 기반 학습 환경 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식 베이스 위키 |
 | [design-pattern-guide](https://github.com/centurio1987/design-pattern-guide) | 디자인 패턴 학습·정리 노트 |
@@ -114,5 +115,5 @@ B2B SaaS와 DX 솔루션을 0→1로 만들고, 온프레미스 네이티브 Kub
 </details>
 
 <!-- profile:last-updated:start -->
-<!-- Last updated: 2026-06-30 -->
+<!-- Last updated: 2026-07-04 -->
 <!-- profile:last-updated:end -->
