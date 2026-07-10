@@ -1,29 +1,20 @@
 {
-  "last_successful_refresh_at": "2026-07-03T16:17:07.286352Z",
+  "last_successful_refresh_at": "2026-07-10T16:03:55.444584Z",
   "profile_repo": "centurio1987/centurio1987",
-  "readme_commit_sha": "e3dc6c077411f3640f09d57b1943163d4cf55044",
-  "workflow_commit_sha": "7a204d16e6df02687e06983924046646e76728a5",
+  "readme_commit_sha": "6f1db498102f5481a194ffac53096c88b068a350",
+  "workflow_commit_sha": "941bd64779378d3e31cff0f5be9fa02e09027ecb",
   "workflow": {
     "filename": "grs.yml",
-    "run_id": 28672124397,
-    "url": "https://github.com/centurio1987/centurio1987/actions/runs/28672124397",
+    "run_id": 29105963125,
+    "url": "https://github.com/centurio1987/centurio1987/actions/runs/29105963125",
     "status": "completed",
     "conclusion": "success",
-    "created_at": "2026-07-03T16:16:18Z",
-    "updated_at": "2026-07-03T16:16:47Z"
+    "created_at": "2026-07-10T16:03:03Z",
+    "updated_at": "2026-07-10T16:03:38Z"
   },
   "review": {
     "status": "APPROVED",
     "score": 94,
     "threshold": 85
-  },
-  "manual_fixes_after_refresh": [
-    {
-      "timestamp": "2026-07-03T04:25:07.464899Z",
-      "readme_commit_sha": "8a9faca37592c4f869588da09311ab4984aa0f7b",
-      "workflow_commit_sha": "9f84b196446b4df9f89ef8f2847679c4afc8e5dc",
-      "state_commit_sha": "747929ba297a05e3fdb80f80a2eb0bf2bbb60633",
-      "note": "Manual correction: removed omission-reason wording and corrected bbangto-ui classification. This must not advance the collector window."
-    }
-  ]
+  }
 }
