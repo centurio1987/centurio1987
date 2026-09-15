@@ -1,15 +1,14 @@
-
-    <svg width="576.5"  height="120" viewBox="0 0 576.5 120" fill="#282828" xmlns="http://www.w3.org/2000/svg">
-    <style>
-    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #fabd2f }
-    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8ec07c }
-    .gray { fill: #858585 }
-    </style>
-    <rect x="0.5" y="0.5" width="575.5" height="99%" rx="4.5" fill="#282828" stroke="#e4e2e2"/>
-    <text x="25" y="45" class="text">Something went wrong! file an issue at https://tiny.one/readme-stats</text>
-    <text data-testid="message" x="25" y="55" class="text small">
-      <tspan x="25" dy="18">Resource not accessible by personal access token</tspan>
-      <tspan x="25" dy="18" class="gray">OK</tspan>
-    </text>
-    </svg>
-  
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="204" viewBox="0 0 480 204" role="img">
+<title>Public GitHub activity</title><desc>Public, owned, non-fork repositories. Updated 2026-09-15 UTC.</desc>
+<rect x="1" y="1" width="478" height="202" rx="12" fill="#161b22" stroke="#30363d"/>
+<g font-family="Arial, sans-serif" fill="#e6edf3">
+<text x="24" y="34" font-size="19" font-weight="bold">Public GitHub activity</text>
+<text x="24" y="67" font-size="14">Public repositories</text>
+<text x="450" y="67" text-anchor="end" font-size="16" fill="#79c0ff">11</text>
+<text x="24" y="97" font-size="14">Stars received</text>
+<text x="450" y="97" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
+<text x="24" y="127" font-size="14">Forks received</text>
+<text x="450" y="127" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
+<text x="24" y="169" font-size="11" fill="#9da7b3">Public, owned, non-fork repositories</text>
+<text x="24" y="187" font-size="11" fill="#9da7b3">Updated 2026-09-15 UTC</text>
+</g></svg>
