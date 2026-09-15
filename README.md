@@ -85,10 +85,14 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 ## GitHub 활동
 
 <!-- profile:stats:start -->
-[![공개 저장소 수·스타·포크 집계](./profile/stats.svg)](https://github.com/centurio1987?tab=repositories)
+[![최근 365일 전체 기여·커밋·PR·리뷰·이슈·활동일·최근 30일 기여](./profile/stats.svg)](https://github.com/centurio1987?tab=overview)
 [![주요 언어별 공개 저장소 수](./profile/top-langs.svg)](https://github.com/centurio1987?tab=repositories)
 
-공개된 본인 소유 저장소 중 fork를 제외해 집계합니다. 언어는 저장소별 주 언어의 개수이며 코드 비중이나 숙련도를 뜻하지 않습니다. 카드에 마지막 집계일을 표시합니다.
+**최근 365일의 기여**를 GitHub 기여 캘린더 기준으로 집계합니다. 전체 기여, 커밋, 생성한 PR·이슈, PR 리뷰, 활동일 수와 최근 30일 기여를 표시합니다. 오늘은 진행 중이며, 카드에 집계 기간과 갱신일을 함께 표시합니다.
+
+전체 기여에는 GitHub 공개 설정에 따라 비공개 활동의 익명 기여가 포함될 수 있습니다. 유형별 수치는 조회 권한으로 확인 가능한 범위이므로 합계와 다를 수 있습니다. 비공개 저장소 이름이나 작업 내용은 표시하지 않습니다. [GitHub의 기여 집계 기준](https://docs.github.com/en/account-and-profile/concepts/contributions-visible-on-your-profile)
+
+언어 카드는 공개된 본인 소유 저장소 중 fork를 제외한 주 언어별 저장소 수이며, 코드 비중이나 숙련도를 뜻하지 않습니다. 갱신 실패 시 마지막 정상 통계를 유지합니다.
 
 [기여 캘린더와 최근 활동 보기](https://github.com/centurio1987?tab=overview)
 <!-- profile:stats:end -->

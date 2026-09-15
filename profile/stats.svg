@@ -1,14 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="204" viewBox="0 0 480 204" role="img">
-<title>Public GitHub activity</title><desc>Public, owned, non-fork repositories. Updated 2026-09-15 UTC.</desc>
-<rect x="1" y="1" width="478" height="202" rx="12" fill="#161b22" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="324" viewBox="0 0 480 324" role="img">
+<title>GitHub contributions · Last 365 days</title><desc>2025-09-16 to 2026-09-15 UTC · GitHub contribution rules. Updated 2026-09-15 UTC.</desc>
+<rect x="1" y="1" width="478" height="322" rx="12" fill="#161b22" stroke="#30363d"/>
 <g font-family="Arial, sans-serif" fill="#e6edf3">
-<text x="24" y="34" font-size="19" font-weight="bold">Public GitHub activity</text>
-<text x="24" y="67" font-size="14">Public repositories</text>
-<text x="450" y="67" text-anchor="end" font-size="16" fill="#79c0ff">11</text>
-<text x="24" y="97" font-size="14">Stars received</text>
-<text x="450" y="97" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
-<text x="24" y="127" font-size="14">Forks received</text>
-<text x="450" y="127" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
-<text x="24" y="169" font-size="11" fill="#9da7b3">Public, owned, non-fork repositories</text>
-<text x="24" y="187" font-size="11" fill="#9da7b3">Updated 2026-09-15 UTC</text>
+<text x="24" y="34" font-size="19" font-weight="bold">GitHub contributions · Last 365 days</text>
+<text x="24" y="67" font-size="14">Total contributions</text>
+<text x="450" y="67" text-anchor="end" font-size="16" fill="#79c0ff">1,657</text>
+<text x="24" y="97" font-size="14">Commits</text>
+<text x="450" y="97" text-anchor="end" font-size="16" fill="#79c0ff">1,611</text>
+<text x="24" y="127" font-size="14">Pull requests opened</text>
+<text x="450" y="127" text-anchor="end" font-size="16" fill="#79c0ff">15</text>
+<text x="24" y="157" font-size="14">Pull request reviews</text>
+<text x="450" y="157" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
+<text x="24" y="187" font-size="14">Issues opened</text>
+<text x="450" y="187" text-anchor="end" font-size="16" fill="#79c0ff">0</text>
+<text x="24" y="217" font-size="14">Active days</text>
+<text x="450" y="217" text-anchor="end" font-size="16" fill="#79c0ff">112</text>
+<text x="24" y="247" font-size="14">Contributions in last 30 days</text>
+<text x="450" y="247" text-anchor="end" font-size="16" fill="#79c0ff">757</text>
+<text x="24" y="289" font-size="11" fill="#9da7b3">2025-09-16 to 2026-09-15 UTC · GitHub contribution rules</text>
+<text x="24" y="307" font-size="11" fill="#9da7b3">Updated 2026-09-15 UTC</text>
 </g></svg>

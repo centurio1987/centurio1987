@@ -1,4 +1,4 @@
-"""Render validated local SVG cards using public repository metadata only."""
+"""Render contribution metrics and public language metadata as local SVGs."""
 import collections
 import datetime
 import json
@@ -10,6 +10,55 @@ from xml.etree import ElementTree as ET
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
+
+QUERY = '''query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      totalCommitContributions totalIssueContributions
+      totalPullRequestContributions totalPullRequestReviewContributions
+      contributionCalendar {
+        totalContributions
+        weeks { contributionDays { date contributionCount } }
+      }
+    }
+  }
+}'''
+
+
+def contribution_rows(payload, start, end):
+    if payload.get('errors'):
+        raise ValueError('GitHub returned GraphQL errors; keeping previous cards')
+    collection = payload['data']['user']['contributionsCollection']
+    calendar = collection['contributionCalendar']
+
+    def count(value):
+        if type(value) is not int or value < 0:
+            raise ValueError('Missing or invalid contribution count')
+        return value
+
+    days = {}
+    for week in calendar['weeks']:
+        for item in week['contributionDays']:
+            day = datetime.date.fromisoformat(item['date'])
+            if start <= day <= end:
+                if day in days:
+                    raise ValueError('Duplicate calendar date')
+                days[day] = count(item['contributionCount'])
+    if len(days) != (end - start).days + 1:
+        raise ValueError('Incomplete contribution calendar')
+    total = count(calendar['totalContributions'])
+    if total != sum(days.values()):
+        raise ValueError('Calendar total does not match daily contributions')
+    return [
+        ('Total contributions', total),
+        ('Commits', count(collection['totalCommitContributions'])),
+        ('Pull requests opened', count(collection['totalPullRequestContributions'])),
+        ('Pull request reviews', count(collection['totalPullRequestReviewContributions'])),
+        ('Issues opened', count(collection['totalIssueContributions'])),
+        ('Active days', sum(value > 0 for value in days.values())),
+        ('Contributions in last 30 days', sum(value for day, value in days.items()
+                                             if day >= end - datetime.timedelta(days=29))),
+    ]
 
 
 def summarize(pages):
@@ -54,11 +103,20 @@ def main():
     response = subprocess.run(
         ['gh', 'api', f'users/{owner}/repos?type=owner&per_page=100', '--paginate', '--slurp'],
         check=True, capture_output=True, text=True, timeout=120)
-    stats, languages = summarize(json.loads(response.stdout))
-    day = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+    _, languages = summarize(json.loads(response.stdout))
+    now = datetime.datetime.now(datetime.timezone.utc)
+    end = now.date()
+    start = end - datetime.timedelta(days=364)
+    response = subprocess.run(
+        ['gh', 'api', 'graphql', '-f', f'query={QUERY}', '-f', f'login={owner}',
+         '-f', f'from={start.isoformat()}T00:00:00Z', '-f', f'to={now.isoformat()}'],
+        check=True, capture_output=True, text=True, timeout=120)
+    stats = contribution_rows(json.loads(response.stdout), start, end)
+    day = end.isoformat()
     # Complete retrieval, parsing and rendering before replacing any existing card.
     outputs = {
-        'stats.svg': card('Public GitHub activity', stats, 'Public, owned, non-fork repositories', day),
+        'stats.svg': card('GitHub contributions · Last 365 days', stats,
+                          f'{start} to {end} UTC · GitHub contribution rules', day),
         'top-langs.svg': card('Primary languages', languages, 'Repository counts, not code volume or proficiency', day),
     }
     for name, svg in outputs.items():
