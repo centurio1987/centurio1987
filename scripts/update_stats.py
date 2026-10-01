@@ -87,8 +87,9 @@ def card(title, rows, note, day):
              f'<text x="24" y="34" font-size="19" font-weight="bold">{escape(title)}</text>']
     for i, (label, value) in enumerate(rows or [('No language metadata', 0)]):
         y = 67 + i * 30
+        displayed = f'{value:,}' if isinstance(value, (int, float)) else str(value)
         lines.append(f'<text x="24" y="{y}" font-size="14">{escape(label)}</text>')
-        lines.append(f'<text x="450" y="{y}" text-anchor="end" font-size="16" fill="#79c0ff">{value:,}</text>')
+        lines.append(f'<text x="450" y="{y}" text-anchor="end" font-size="16" fill="#79c0ff">{escape(displayed)}</text>')
     lines.extend([f'<text x="24" y="{height-35}" font-size="11" fill="#9da7b3">{escape(note)}</text>',
                   f'<text x="24" y="{height-17}" font-size="11" fill="#9da7b3">Updated {day} UTC</text>', '</g></svg>'])
     svg = '\n'.join(lines) + '\n'

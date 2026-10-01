@@ -95,8 +95,18 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 언어 카드는 공개된 본인 소유 저장소 중 fork를 제외한 주 언어별 저장소 수이며, 코드 비중이나 숙련도를 뜻하지 않습니다. 갱신 실패 시 마지막 정상 통계를 유지합니다.
 
 [기여 캘린더와 최근 활동 보기](https://github.com/centurio1987?tab=overview)
+
+### Claude Code 사용량
+
+[![최근 365일 Claude Code 토큰·응답·세션 사용량](./profile/claude-usage.svg)](./profile/claude-usage.svg)
+[![Claude 모델별 처리 토큰](./profile/claude-models.svg)](./profile/claude-models.svg)
+[![Claude Code 월별 토큰 사용량과 예상 API 비용](./profile/claude-monthly.svg)](./profile/claude-monthly.svg)
+
+로컬 Claude Code 세션 기록에서 **최근 365일 총 사용량과 월별 사용량**을 집계했습니다. 월별 차트는 같은 365일을 달력 월로 나눴으므로 양 끝 달은 일부 날짜만 포함됩니다. **처리 토큰**은 입력·출력·캐시 생성·캐시 읽기의 합계이며 고유한 텍스트 분량이 아닙니다. 같은 모델 응답이 여러 번 기록된 경우 한 번만 셉니다.
+
+**예상 API와 동등한 비용**은 수집된 토큰에 모델별 [Anthropic 공개 API 요금](https://platform.claude.com/docs/en/about-claude/pricing)을 적용한 USD 추정치입니다(요금 확인: 2026-10-01). 일반 API 요금과 캐시 쓰기 기간별·캐시 읽기 요금을 사용했습니다. 실제 Claude Code 구독 결제액, 할인·세금·도구 사용료가 아니며, 로그에서 캐시 기간을 알 수 없으면 5분 요금을 적용합니다. 로컬에서 집계하므로 카드의 갱신일 이후 사용량은 포함되지 않습니다. 프로젝트명·대화 내용·세션 식별자는 공개하지 않습니다.
 <!-- profile:stats:end -->
 
 <!-- profile:last-updated:start -->
-<sub>프로필 검토: 2026-09-15</sub>
+<sub>프로필 검토: 2026-10-01</sub>
 <!-- profile:last-updated:end -->
