@@ -28,32 +28,16 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 ## 공개 프로젝트
 
 <!-- profile:projects:start -->
-현재 공개 작업은 **재사용 가능한 UI**, **AI를 활용한 작업 자동화**, **학습과 지식의 축적**을 중심으로 이어지고 있습니다. 아래는 공개 저장소의 README와 최근 코드 반영일을 확인해 정리한 내용입니다. 반영일은 배포일이나 서비스 운영 상태를 뜻하지 않습니다.
+재사용 가능한 UI, 작업 자동화, 학습 도구와 기술 글쓰기를 중심으로 공개 프로젝트를 만들고 있습니다.
 
-### 개발 도구와 자동화
-
-| 프로젝트 | Summary | 구현·탐구 내용 | 최근 반영 |
-| --- | --- | --- | --- |
-| [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | 화면과 시각화를 일관된 규칙으로 조립하는 React 디자인 시스템 | 디자인 토큰, 컴포넌트·블록·패턴, 스타일 가이드 카탈로그, headless 시각화와 Storybook 검증 환경 | 2026-08-25 |
-| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 반복 작업을 재사용 가능한 플러그인으로 묶는 개인 마켓플레이스 | 스킬·MCP·커맨드·훅 패키징, 위키 관리와 작업 후 회고를 통한 자동화 자산 정리 | 2026-08-27 |
-| [tech-news-wiki](https://github.com/centurio1987/tech-news-wiki) | 기술 뉴스를 수집·검토해 누적형 지식으로 만드는 파이프라인 | Python 기반 수집·중복 제거·클러스터링, 신뢰도 검토, 위키 생성과 지식그래프 점검 | 2026-07-02 |
-
-### 제품 실험과 기록
-
-| 프로젝트 | Summary | 구현·탐구 내용 | 최근 반영 |
-| --- | --- | --- | --- |
-| [mindful-fortune-teller](https://github.com/centurio1987/mindful-fortune-teller) | 운세와 대화를 접점으로 삼은 마음챙김 웹 앱 실험 | Vue 3·Bun·SQLite 기반 풀스택 구성, 감정 기록과 AI 파트너 대화 | 2026-05-10 |
-| [centurio1987.github.io](https://github.com/centurio1987/centurio1987.github.io) | 기술 해설과 개인 글을 쌓는 Astro 블로그 | MDX 콘텐츠, 리서치·초고·검토로 이어지는 집필 과정, GitHub Pages 배포 | 2026-09-10 |
-
-### 학습과 지식 관리
-
-| 프로젝트 | Summary | 구현·탐구 내용 | 최근 반영 |
-| --- | --- | --- | --- |
-| [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 문제·풀이·테스트·해설을 함께 축적하는 알고리즘 학습 저장소 | TypeScript·Bun 테스트, 풀이 재검토 이력, React 시뮬레이션을 포함한 MDX 가이드 | 2026-09-14 |
-| [design-pattern-guide](https://github.com/centurio1987/design-pattern-guide) | 디자인 패턴을 학습하고 정리하는 노트 | 설계 패턴 학습 기록 | 2026-06-12 |
-| [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식과 참고 자료를 축적하는 위키 | 지식 관리와 학습 기록 | 2026-06-10 |
-
-비공개 작업은 저장소 이름·링크·내부 구현을 공개하지 않습니다.
+| 프로젝트 | 구현·탐구 내용 |
+| --- | --- |
+| [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | TypeScript·Bun으로 알고리즘 문제와 테스트를 만들고, 풀이·분석 기록은 별도 브랜치에서 관리합니다. 해설에는 단계별 React 시뮬레이션도 활용합니다. |
+| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 집필, 위키 관리, 웹 리서치, 프로젝트 초기화 등 반복 작업을 스킬·에이전트·훅으로 묶어 배포하는 개인 플러그인 마켓플레이스입니다. |
+| [centurio1987.github.io](https://github.com/centurio1987/centurio1987.github.io) | Astro·MDX 기반 블로그에서 기술 해설과 개인 글을 쓰고, 자료 조사부터 검토·발행까지의 집필 과정을 도구로 정리합니다. |
+| [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | 디자인 토큰을 공유하는 React 디자인 시스템입니다. 컴포넌트, 페이지 섹션, 모션, 시각화와 스타일 가이드 카탈로그를 제공합니다. |
+| [tech-news-wiki](https://github.com/centurio1987/tech-news-wiki) | 기술 뉴스를 수집·중복 제거·검토해 위키와 지식그래프로 축적하는 Python 파이프라인입니다. |
+| [growup-analysis](https://github.com/centurio1987/growup-analysis) | 고객 이탈, 세그먼트, 캠페인 효과를 주제로 데이터 품질 점검부터 예측 모델 비교까지 연습할 수 있는 분석 과제를 구성했습니다. |
 <!-- profile:projects:end -->
 
 ## 기술 스택
@@ -81,32 +65,3 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 - **LinkedIn** — [김윤덕](https://www.linkedin.com/in/yoondeok-kim-319bb8145)
 - **Blog** — [빵관 토니](https://centurio1987.github.io)
 <!-- profile:contact:end -->
-
-## GitHub 활동
-
-<!-- profile:stats:start -->
-[![최근 365일 전체 기여·커밋·PR·리뷰·이슈·활동일·최근 30일 기여](./profile/stats.svg)](https://github.com/centurio1987?tab=overview)
-[![주요 언어별 공개 저장소 수](./profile/top-langs.svg)](https://github.com/centurio1987?tab=repositories)
-
-**최근 365일의 기여**를 GitHub 기여 캘린더 기준으로 집계합니다. 전체 기여, 커밋, 생성한 PR·이슈, PR 리뷰, 활동일 수와 최근 30일 기여를 표시합니다. 오늘은 진행 중이며, 카드에 집계 기간과 갱신일을 함께 표시합니다.
-
-전체 기여에는 GitHub 공개 설정에 따라 비공개 활동의 익명 기여가 포함될 수 있습니다. 유형별 수치는 조회 권한으로 확인 가능한 범위이므로 합계와 다를 수 있습니다. 비공개 저장소 이름이나 작업 내용은 표시하지 않습니다. [GitHub의 기여 집계 기준](https://docs.github.com/en/account-and-profile/concepts/contributions-visible-on-your-profile)
-
-언어 카드는 공개된 본인 소유 저장소 중 fork를 제외한 주 언어별 저장소 수이며, 코드 비중이나 숙련도를 뜻하지 않습니다. 갱신 실패 시 마지막 정상 통계를 유지합니다.
-
-[기여 캘린더와 최근 활동 보기](https://github.com/centurio1987?tab=overview)
-
-### Claude Code 사용량
-
-[![최근 365일 Claude Code 토큰·응답·세션 사용량](./profile/claude-usage.svg)](./profile/claude-usage.svg)
-[![Claude 모델별 처리 토큰](./profile/claude-models.svg)](./profile/claude-models.svg)
-[![Claude Code 월별 토큰 사용량과 예상 API 비용](./profile/claude-monthly.svg)](./profile/claude-monthly.svg)
-
-로컬 Claude Code 세션 기록에서 **최근 365일 총 사용량과 월별 사용량**을 집계했습니다. 월별 차트는 같은 365일을 달력 월로 나눴으므로 양 끝 달은 일부 날짜만 포함됩니다. **처리 토큰**은 입력·출력·캐시 생성·캐시 읽기의 합계이며 고유한 텍스트 분량이 아닙니다. 같은 모델 응답이 여러 번 기록된 경우 한 번만 셉니다.
-
-**예상 API와 동등한 비용**은 수집된 토큰에 모델별 [Anthropic 공개 API 요금](https://platform.claude.com/docs/en/about-claude/pricing)을 적용한 USD 추정치입니다(요금 확인: 2026-10-01). 일반 API 요금과 캐시 쓰기 기간별·캐시 읽기 요금을 사용했습니다. 실제 Claude Code 구독 결제액, 할인·세금·도구 사용료가 아니며, 로그에서 캐시 기간을 알 수 없으면 5분 요금을 적용합니다. 로컬에서 집계하므로 카드의 갱신일 이후 사용량은 포함되지 않습니다. 프로젝트명·대화 내용·세션 식별자는 공개하지 않습니다.
-<!-- profile:stats:end -->
-
-<!-- profile:last-updated:start -->
-<sub>프로필 검토: 2026-10-01</sub>
-<!-- profile:last-updated:end -->
