@@ -32,12 +32,12 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 
 | 프로젝트 | 구현·탐구 내용 |
 | --- | --- |
-| [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | TypeScript·Bun으로 알고리즘 문제와 테스트를 만들고 React 시뮬레이션을 곁들인 해설을 씁니다. 풀이와 분석 보고서는 `solutions` 브랜치에 분리하고, `main`의 새 문제·해설을 받아오는 병합 도구를 만들었습니다. |
-| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 집필 규칙을 프로젝트 간 공유하는 `authoring-kit`과 문체 검사 도구를 개발합니다. 웹 리서치·위키 관리·프로젝트 초기화·애니메이션 등 반복 작업도 스킬·에이전트·훅으로 묶어 배포합니다. |
+| [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | TypeScript·Bun으로 알고리즘 문제와 테스트를 만들고, 풀이·분석 기록은 별도 브랜치에서 관리합니다. 해설에는 단계별 React 시뮬레이션도 활용합니다. |
+| [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 집필, 위키 관리, 웹 리서치, 프로젝트 초기화 등 반복 작업을 스킬·에이전트·훅으로 묶어 배포하는 개인 플러그인 마켓플레이스입니다. |
 | [centurio1987.github.io](https://github.com/centurio1987/centurio1987.github.io) | Astro·MDX 기반 블로그에서 기술 해설과 개인 글을 쓰고, 자료 조사부터 검토·발행까지의 집필 과정을 도구로 정리합니다. |
 | [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | 디자인 토큰을 공유하는 React 디자인 시스템입니다. 컴포넌트, 페이지 섹션, 모션, 시각화와 스타일 가이드 카탈로그를 제공합니다. |
 | [tech-news-wiki](https://github.com/centurio1987/tech-news-wiki) | 기술 뉴스를 수집·중복 제거·검토해 위키와 지식그래프로 축적하는 Python 파이프라인입니다. |
-| [grow-up-architecture](https://github.com/centurio1987/grow-up-architecture) | Python·TypeScript·Rust·Java로 디자인 패턴을 비교 실습하고, 객체 모델링과 패턴 해설을 정리합니다. |
+| [growup-analysis](https://github.com/centurio1987/growup-analysis) | 고객 이탈, 세그먼트, 캠페인 효과를 주제로 데이터 품질 점검부터 예측 모델 비교까지 연습할 수 있는 분석 과제를 구성했습니다. |
 <!-- profile:projects:end -->
 
 ## 기술 스택
