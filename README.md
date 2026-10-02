@@ -25,10 +25,10 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 | 제품·팀 | 현장 맥락 조사, 제품 전략·가격 정책, 개발 표준·팀 프로세스 수립 | 사용자와 구매자의 문제를 구분하고, 팀이 기획부터 구현까지 책임질 환경을 만듭니다. |
 <!-- profile:experience-summary:end -->
 
-## 공개 프로젝트
+## 개인 프로젝트
 
 <!-- profile:projects:start -->
-현재 공개 작업은 **재사용 가능한 UI**, **AI를 활용한 작업 자동화**, **학습과 지식의 축적**을 중심으로 이어지고 있습니다.
+현재 개인 작업은 **재사용 가능한 UI**, **AI를 활용한 업무 관리와 자동화**, **학습과 지식의 축적**을 중심으로 이어지고 있습니다. tomae에서는 에이전트의 계획·실행·검토를 연결하고, 번역 도구와 리서치 위키에서는 자료를 재사용 가능한 지식으로 쌓고 있습니다.
 
 ### 개발 도구와 자동화
 
@@ -37,11 +37,14 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 | [bbangto-ui](https://github.com/centurio1987/bbangto-ui) | 화면과 시각화를 일관된 규칙으로 조립하는 React 디자인 시스템 | 디자인 토큰, 컴포넌트·블록·패턴, 스타일 가이드 카탈로그, headless 시각화와 Storybook 검증 환경 | 2026-08-25 |
 | [my-claude-plugins](https://github.com/centurio1987/my-claude-plugins) | 반복 작업을 재사용 가능한 플러그인으로 묶는 개인 마켓플레이스 | 집필 규칙을 공유하는 authoring-kit과 문체 검사 도구, 웹 리서치·위키 관리·애니메이션·프로젝트 초기화 플러그인 | 2026-10-01 |
 | [tech-news-wiki](https://github.com/centurio1987/tech-news-wiki) | 기술 뉴스를 수집·검토해 누적형 지식으로 만드는 파이프라인 | Python 기반 수집·중복 제거·클러스터링, 신뢰도 검토, 위키 생성과 지식그래프 점검 | 2026-07-02 |
+| tr-docs (비공개) | PDF와 공식 문서를 한국어 EPUB으로 만드는 번역 도구 | 청크별 진행 상태 저장과 중단 후 재개, OCR 대체 처리, 병렬 번역과 EPUB 생성 | 2026-06-02 |
 
 ### 제품 실험과 기록
 
 | 프로젝트 | Summary | 구현·탐구 내용 | 최근 반영 |
 | --- | --- | --- | --- |
+| tomae (비공개) | AI 에이전트의 계획·실행·검토를 연결하는 프로젝트 관리 앱 | Electron 기반 다중 프로젝트 운영, 칸반·Git·PR 연동, 워크플로 편집기와 전략 맵 | 2026-09-28 |
+| bbangto-secretary (비공개) | 업무 기록과 할 일을 연결하는 AI 업무 보조 서비스 기획 | 활동 기록·대시보드·할 일 그래프·대화 경험의 요구사항 정리, 시스템 설계 전략 구상 | 2026-09-15 |
 | [mindful-fortune-teller](https://github.com/centurio1987/mindful-fortune-teller) | 운세와 대화를 접점으로 삼은 마음챙김 웹 앱 실험 | Vue 3·Bun·SQLite 기반 풀스택 구성, 감정 기록과 AI 파트너 대화 | 2026-05-10 |
 | [centurio1987.github.io](https://github.com/centurio1987/centurio1987.github.io) | 기술 해설과 개인 글을 쌓는 Astro 블로그 | MDX 콘텐츠, 리서치·초고·검토로 이어지는 집필 과정, GitHub Pages 배포 | 2026-09-10 |
 
@@ -52,6 +55,9 @@ Product Engineer · Node.js / TypeScript · CTO / PO 경험
 | [grow-up-programming](https://github.com/centurio1987/grow-up-programming) | 문제·풀이·테스트·해설을 함께 축적하는 알고리즘 학습 저장소 | TypeScript·Bun 테스트와 React 시뮬레이션, 실습을 포함한 Markdown 가이드, 풀이·분석을 solutions 브랜치에 보존하는 병합 도구 | 2026-10-01 |
 | [grow-up-architecture](https://github.com/centurio1987/grow-up-architecture) | 디자인 패턴과 객체 모델링을 비교 학습하는 노트 | Python·TypeScript·Rust·Java 패턴 실습, Transaction·Account·Entry 객체 모델링 해설 | 2026-06-12 |
 | [my-wiki](https://github.com/centurio1987/my-wiki) | 개인 지식과 참고 자료를 축적하는 위키 | 지식 관리와 학습 기록 | 2026-06-10 |
+| blog-research (비공개) | 수집한 자료에서 블로그 글감을 발전시키는 리서치 위키 | 원본 자료 요약·상호 연결, 주제별 근거 축적, 집필 관점과 부족한 자료 정리 | 2026-08-18 |
+| stock-analysis (비공개) | 기업·산업·투자 주제를 누적 분석하는 개인 지식 베이스 | 기사·리포트·공시 기반 요약, 기업·섹터 교차 참조, 출처와 모순 점검 | 2026-07-09 |
+| estd (비공개) | 범용 자료구조와 알고리즘을 구현하는 Rust 라이브러리 | 힙 기반 우선순위 큐, 방향·가중치 그래프, BFS·DFS·Dijkstra와 사이클 탐지 | 2026-05-29 |
 
 <!-- profile:projects:end -->
 
