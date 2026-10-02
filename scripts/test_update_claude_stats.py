@@ -9,6 +9,18 @@ import update_claude_stats as claude
 
 
 class ClaudeUsageTests(unittest.TestCase):
+    def test_five_year_monthly_chart_contains_all_months(self):
+        end = dt.date(2026, 10, 2)
+        start = claude.five_year_start(end)
+        monthly = {'2026-09': {'tokens': 1_000_000, 'cost': 10}}
+        root = ET.fromstring(claude.monthly_chart(monthly, start, end))
+        bars = [item for item in root.iter() if item.get('data-series') == 'tokens']
+        self.assertEqual(len(bars), 61)
+        self.assertEqual(bars[0].get('data-month'), '2021-10')
+        self.assertEqual(bars[-1].get('data-month'), '2026-10')
+        self.assertTrue(all(float(item.get('height')) == 0 for item in bars[:-2]))
+        self.assertGreater(float(bars[-2].get('height')), 0)
+
     def test_deduplicates_responses_and_omits_private_content(self):
         day = dt.date(2026, 10, 1)
         with tempfile.TemporaryDirectory() as folder:

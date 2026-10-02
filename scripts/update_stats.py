@@ -25,7 +25,23 @@ QUERY = '''query($login: String!, $from: DateTime!, $to: DateTime!) {
 }'''
 
 
-def contribution_rows(payload, start, end):
+def five_year_start(end):
+    # Inclusive rolling five-year window, including leap years.
+    try:
+        anniversary = end.replace(year=end.year - 5)
+    except ValueError:
+        anniversary = end.replace(year=end.year - 5, day=28)
+    return anniversary + datetime.timedelta(days=1)
+
+
+def calendar_chunks(start, end):
+    while start <= end:
+        finish = min(end, datetime.date(start.year, 12, 31))
+        yield start, finish
+        start = finish + datetime.timedelta(days=1)
+
+
+def contribution_rows(payload, start, end, reference_end=None):
     if payload.get('errors'):
         raise ValueError('GitHub returned GraphQL errors; keeping previous cards')
     collection = payload['data']['user']['contributionsCollection']
@@ -49,6 +65,7 @@ def contribution_rows(payload, start, end):
     total = count(calendar['totalContributions'])
     if total != sum(days.values()):
         raise ValueError('Calendar total does not match daily contributions')
+    reference_end = reference_end or end
     return [
         ('Total contributions', total),
         ('Commits', count(collection['totalCommitContributions'])),
@@ -57,7 +74,7 @@ def contribution_rows(payload, start, end):
         ('Issues opened', count(collection['totalIssueContributions'])),
         ('Active days', sum(value > 0 for value in days.values())),
         ('Contributions in last 30 days', sum(value for day, value in days.items()
-                                             if day >= end - datetime.timedelta(days=29))),
+                                             if day >= reference_end - datetime.timedelta(days=29))),
     ]
 
 
@@ -107,17 +124,22 @@ def main():
     _, languages = summarize(json.loads(response.stdout))
     now = datetime.datetime.now(datetime.timezone.utc)
     end = now.date()
-    start = end - datetime.timedelta(days=364)
-    response = subprocess.run(
-        ['gh', 'api', 'graphql', '-f', f'query={QUERY}', '-f', f'login={owner}',
-         '-f', f'from={start.isoformat()}T00:00:00Z', '-f', f'to={now.isoformat()}'],
-        check=True, capture_output=True, text=True, timeout=120)
-    stats = contribution_rows(json.loads(response.stdout), start, end)
+    start = five_year_start(end)
+    totals = collections.Counter()
+    # GitHub limits each contribution query to one year. Boundaries never overlap.
+    for first, last in calendar_chunks(start, end):
+        until = now.isoformat() if last == end else f'{last.isoformat()}T23:59:59Z'
+        response = subprocess.run(
+            ['gh', 'api', 'graphql', '-f', f'query={QUERY}', '-f', f'login={owner}',
+             '-f', f'from={first.isoformat()}T00:00:00Z', '-f', f'to={until}'],
+            check=True, capture_output=True, text=True, timeout=120)
+        totals.update(dict(contribution_rows(json.loads(response.stdout), first, last, end)))
+    stats = list(totals.items())
     day = end.isoformat()
     # Complete retrieval, parsing and rendering before replacing any existing card.
     outputs = {
-        'stats.svg': card('GitHub contributions · Last 365 days', stats,
-                          f'{start} to {end} UTC · GitHub contribution rules', day),
+        'stats.svg': card('GitHub contributions · Last 5 years', stats,
+                          f'{start} to {end} UTC', day),
         'top-langs.svg': card('Primary languages', languages, 'Repository counts, not code volume or proficiency', day),
     }
     for name, svg in outputs.items():

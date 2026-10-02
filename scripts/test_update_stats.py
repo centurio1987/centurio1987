@@ -10,6 +10,25 @@ import update_stats as stats
 
 
 class ContributionTests(unittest.TestCase):
+    def test_five_year_window_and_nonoverlapping_chunks(self):
+        end = dt.date(2026, 10, 2)
+        start = stats.five_year_start(end)
+        self.assertEqual(start, dt.date(2021, 10, 3))
+        chunks = list(stats.calendar_chunks(start, end))
+        days = [first + dt.timedelta(days=i) for first, last in chunks
+                for i in range((last-first).days + 1)]
+        self.assertEqual(len(days), len(set(days)))
+        self.assertEqual(len(days), (end-start).days + 1)
+        self.assertIn(dt.date(2024, 2, 29), days)
+        self.assertTrue(all(first.year == last.year for first, last in chunks))
+        self.assertEqual(stats.five_year_start(dt.date(2024, 2, 29)), dt.date(2019, 3, 1))
+
+    def test_old_chunk_does_not_add_historical_last_30_days(self):
+        payload, start, end = self.fixture()
+        rows = dict(stats.contribution_rows(payload, start, end, dt.date(2026, 10, 2)))
+        self.assertEqual(rows['Total contributions'], 4)
+        self.assertEqual(rows['Contributions in last 30 days'], 0)
+
     def fixture(self):
         start = dt.date(2026, 1, 1)
         end = start + dt.timedelta(days=30)

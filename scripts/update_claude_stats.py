@@ -13,7 +13,7 @@ from decimal import Decimal
 from xml.etree import ElementTree as ET
 from xml.sax.saxutils import escape
 
-from update_stats import card
+from update_stats import card, five_year_start
 
 ROOT = Path(__file__).resolve().parents[1]
 LOG_ROOT = Path(os.environ.get('CLAUDE_PROJECTS_DIR', Path.home() / '.claude' / 'projects'))
@@ -80,7 +80,7 @@ def collect(root, start, end):
                 if not isinstance(message_id, str) or not isinstance(session_id, str):
                     continue
                 try:
-                    date = dt.datetime.fromisoformat(record['timestamp'].replace('Z', '+00:00')).date()
+                    date = dt.datetime.fromisoformat(record['timestamp'].replace('Z', '+00:00')).astimezone(dt.timezone.utc).date()
                 except (KeyError, ValueError, TypeError):
                     continue
                 if not start <= date <= end:
@@ -114,28 +114,38 @@ def monthly_chart(monthly, start, end):
     while (year, month) <= (end.year, end.month):
         months.append(f'{year:04d}-{month:02d}')
         year, month = (year + 1, 1) if month == 12 else (year, month + 1)
-    width, height = 760, 95 + 33 * len(months)
-    maximum = max((monthly[m]['tokens'] for m in months if m in monthly), default=0)
+    width, height = 940, 510
+    left, right = 88, 900
+    step = (right - left) / len(months)
+    bar_width = max(1, step - 3)
     lines = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img">',
-             '<title>Claude Code monthly token usage and API equivalent cost</title>',
-             f'<desc>{start} to {end} UTC. Boundary months are partial. Bar length shows tokens; USD amount is estimated API equivalent cost.</desc>',
+             '<title>Monthly Claude Code usage · Last 5 years</title>',
+             f'<desc>Recorded monthly tokens and estimated API cost, {start} to {end} UTC. Boundary months are partial; months without local records have no bars.</desc>',
              f'<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="12" fill="#161b22" stroke="#30363d"/>',
              '<g font-family="Arial, sans-serif" fill="#e6edf3">',
-             '<text x="24" y="34" font-size="19" font-weight="bold">Monthly Claude Code usage</text>',
-             '<text x="482" y="58" font-size="11" fill="#9da7b3">TOKENS</text>',
-             '<text x="661" y="58" font-size="11" fill="#9da7b3">API USD</text>']
-    for index, label in enumerate(months):
-        y = 80 + 33 * index
-        tokens = monthly[label]['tokens'] if label in monthly else 0
-        cost = monthly[label]['cost'] if label in monthly else Decimal(0)
-        bar_width = round(330 * tokens / maximum) if maximum else 0
-        lines.append(f'<text x="24" y="{y+14}" font-size="13">{escape(label)}</text>')
-        lines.append(f'<rect x="112" y="{y}" width="330" height="18" rx="4" fill="#30363d"/>')
-        if bar_width:
-            lines.append(f'<rect x="112" y="{y}" width="{bar_width}" height="18" rx="4" fill="#79c0ff"/>')
-        lines.append(f'<text x="600" y="{y+14}" text-anchor="end" font-size="13">{tokens/1_000_000:,.1f}M</text>')
-        lines.append(f'<text x="736" y="{y+14}" text-anchor="end" font-size="13">${cost:,.2f}</text>')
-    lines.append(f'<text x="24" y="{height-13}" font-size="11" fill="#9da7b3">{start} to {end} UTC · first/last month may be partial</text>')
+             '<text x="24" y="34" font-size="20" font-weight="bold">Monthly Claude Code usage · Last 5 years</text>',
+             f'<text x="24" y="57" font-size="12" fill="#9da7b3">{start} – {end} UTC</text>']
+    for key, title, color, top in [('tokens', 'Recorded tokens', '#79c0ff', 102),
+                                   ('cost', 'Estimated API equivalent · USD', '#d2a8ff', 302)]:
+        values = [float(monthly[m][key]) if m in monthly else 0 for m in months]
+        maximum = max(values, default=0) or 1
+        baseline = top + 140
+        lines.append(f'<text x="24" y="{top-15}" font-size="14" fill="{color}">{title}</text>')
+        for fraction in (0, 0.5, 1):
+            y = baseline - 140 * fraction
+            value = maximum * fraction
+            label = f'{value/1_000_000_000:,.1f}B' if key == 'tokens' and maximum >= 1_000_000_000 else (f'{value/1_000_000:,.1f}M' if key == 'tokens' else f'${value:,.0f}')
+            lines.append(f'<line x1="{left}" x2="{right}" y1="{y}" y2="{y}" stroke="#30363d"/>')
+            lines.append(f'<text x="{left-8}" y="{y+4}" text-anchor="end" font-size="11" fill="#9da7b3">{label}</text>')
+        for index, (month_label, value) in enumerate(zip(months, values)):
+            x = left + index * step + 1.5
+            bar_height = 140 * value / maximum
+            tooltip = f'{month_label}: {int(value):,} tokens' if key == 'tokens' else f'{month_label}: ${value:,.2f} estimated API cost'
+            lines.append(f'<rect x="{x:.2f}" y="{baseline-bar_height:.2f}" width="{bar_width:.2f}" height="{bar_height:.2f}" fill="{color}" data-month="{month_label}" data-series="{key}"><title>{escape(tooltip)}</title></rect>')
+            if index in (0, len(months)-1) or month_label.endswith('-01'):
+                label = month_label if index in (0, len(months)-1) else month_label[:4]
+                lines.append(f'<text x="{x+bar_width/2:.2f}" y="{baseline+19}" text-anchor="middle" font-size="10" fill="#9da7b3">{label}</text>')
+    lines.append(f'<text x="24" y="490" font-size="11" fill="#9da7b3">Updated {end} UTC</text>')
     lines.append('</g></svg>')
     svg = '\n'.join(lines) + '\n'
     ET.fromstring(svg)
@@ -161,7 +171,7 @@ def render(totals, models, calls, sessions, monthly, total_cost, start, end):
     day = end.isoformat()
     note = f'{start} to {end} UTC · Local Claude Code logs'
     return {
-        'claude-usage.svg': card('Claude Code · Last 365 days', rows, note, day),
+        'claude-usage.svg': card('Claude Code · Last 5 years', rows, note, day),
         'claude-models.svg': card('Tokens by Claude model', model_rows,
                                   'Input + output + cache creation + cache read', day),
         'claude-monthly.svg': monthly_chart(monthly, start, end),
@@ -170,7 +180,7 @@ def render(totals, models, calls, sessions, monthly, total_cost, start, end):
 
 def main():
     end = dt.datetime.now(dt.timezone.utc).date()
-    start = end - dt.timedelta(days=364)
+    start = five_year_start(end)
     totals, models, calls, sessions, monthly, total_cost = collect(LOG_ROOT, start, end)
     outputs = render(totals, models, calls, sessions, monthly, total_cost, start, end)
     for name, svg in outputs.items():
